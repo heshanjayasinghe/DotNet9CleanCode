@@ -8,5 +8,6 @@ namespace DotNet9.Domain.DatabaseEntities
 {
     public class User
     {
+        public string Name { get; set; }
     }
 }

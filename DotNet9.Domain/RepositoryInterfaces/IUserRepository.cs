@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNet9.Domain.DatabaseEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace DotNet9.Domain.RepositoryInterfaces
 {
     public interface IUserRepository
     {
+        Task<List<User>> GetUsersList(string? username);
     }
 }

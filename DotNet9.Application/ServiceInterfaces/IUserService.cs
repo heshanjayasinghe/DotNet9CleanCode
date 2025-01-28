@@ -10,5 +10,6 @@ namespace DotNet9.Application.ServiceInterfaces
     public interface IUserService
     {
         Task<List<UserDto>> GetUsers(string userName);
+        Task<List<UserDto>> GetUsersWithoutCache(string userName);
     }
 }

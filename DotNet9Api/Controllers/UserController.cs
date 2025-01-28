@@ -1,5 +1,6 @@
 ﻿using DotNet9.Application.ServiceInterfaces;
 using DotNet9.Application.UseCases.User.Commands;
+using DotNet9.Application.UseCases.User.Queries.GetUsers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +23,14 @@ namespace DotNet9API.Controllers
             
             var user=await _mediator.Send(new GetUsersQuery() { UserName=userName});
             return Ok(user);    
+        }
+
+        [HttpGet("WithoutCache")]
+        public async Task<IActionResult> GetWithoutCache([FromQuery] string userName)
+        {
+
+            var user = await _mediator.Send(new GetUsersWithoutCacheQuery() { UserName = userName });
+            return Ok(user);
         }
 
         [HttpGet("UsingService")]

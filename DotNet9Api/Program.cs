@@ -2,6 +2,7 @@ using DotNet9.API.ServiceRegistration;
 using DotNet9.Application.UseCases.User.Commands;
 using DotNet9API.ServiceRegistration;
 using MediatR;
+using Microsoft.Extensions.Caching.Hybrid;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,9 +20,18 @@ builder.Services.RegisterRequestHandlers();
 builder.Services.AddRepositoryServices();
 builder.Services.AddApplicationServices();
 
-
+builder.Services.AddHybridCache(options => {
+    options.DefaultEntryOptions = new HybridCacheEntryOptions
+    {
+        Expiration = TimeSpan.FromSeconds(10),
+        LocalCacheExpiration = TimeSpan.FromSeconds(5)
+    };
+});
 
 var app = builder.Build();
+
+app.MapGet("/users/{userId}",
+    (int userId) => $"The user id is {userId} ");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
