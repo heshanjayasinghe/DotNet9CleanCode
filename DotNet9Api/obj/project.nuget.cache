@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZaeJLKiZPbc=",
+  "success": true,
+  "projectFilePath": "C:\\Personal\\cleanCodeDotNet9\\DotNet9API\\DotNet9API\\DotNet9.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HeshanJayasinghe\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\HeshanJayasinghe\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\HeshanJayasinghe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\HeshanJayasinghe\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\HeshanJayasinghe\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\HeshanJayasinghe\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
+  ],
+  "logs": []
+}
