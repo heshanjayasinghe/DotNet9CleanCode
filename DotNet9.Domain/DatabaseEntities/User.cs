@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace DotNet9.Domain.DatabaseEntities
 {
     public class User
     {
-        public string Name { get; set; }
+        [Key]
+        public required string UserId { get; set; }
+        public required string   Name { get; set; }
     }
 }

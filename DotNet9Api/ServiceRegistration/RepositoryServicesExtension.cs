@@ -7,6 +7,7 @@ namespace DotNet9API.ServiceRegistration
     {
         public static IServiceCollection AddRepositoryServices(this IServiceCollection services) {
             services.AddScoped<IUserRepository,UserRepository>();
+            services.AddScoped<ISessionRepository, SessionRepository>();
             return services;
         }
     }

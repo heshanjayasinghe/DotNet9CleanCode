@@ -1,11 +1,5 @@
 ﻿using DotNet9.Application.ServiceInterfaces;
-using DotNet9.Application.UseCases.User.Queries.GetUsers;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotNet9.Application.UseCases.User.Commands
 {
@@ -23,12 +17,15 @@ namespace DotNet9.Application.UseCases.User.Commands
         {
             try
             {
-                var result = await _userService.GetUsersWithoutCache(request.UserName);
+                if (request is null) { 
+                 throw new ArgumentNullException(nameof(request));
+                }
+                var result = await _userService.GetUsersWithoutCache(request?.UserName);
 
                 return new UserListResponseDto { userList = result.ToList() };
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }

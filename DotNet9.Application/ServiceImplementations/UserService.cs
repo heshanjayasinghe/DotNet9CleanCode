@@ -1,13 +1,8 @@
 ﻿using DotNet9.Application.ServiceInterfaces;
 using DotNet9.Application.UseCases.User.Commands;
+using DotNet9.Domain.DatabaseEntities;
 using DotNet9.Domain.RepositoryInterfaces;
 using Microsoft.Extensions.Caching.Hybrid;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace DotNet9.Application.ServiceImplementations
 {
@@ -20,9 +15,9 @@ namespace DotNet9.Application.ServiceImplementations
             _cache = cache;
         }
 
-        public async Task<List<UserDto>> GetUsers(string userName) {
+        public async Task<List<UserDto>> GetUsers(string? userName) {
 
-            var result= await _cache.GetOrCreateAsync(
+            List<User> result= await _cache.GetOrCreateAsync(
             $"users-{userName}", // Unique key to the cache entry
             async cancel => await _userRepository.GetUsersList(userName),
             cancellationToken: new CancellationToken()
@@ -39,7 +34,7 @@ namespace DotNet9.Application.ServiceImplementations
            
         }
 
-        public async Task<List<UserDto>> GetUsersWithoutCache(string userName)
+        public async Task<List<UserDto>> GetUsersWithoutCache(string? userName)
         {
 
             var result = await _userRepository.GetUsersList(userName);
