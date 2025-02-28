@@ -1,0 +1,25 @@
+//should run from the solution level , 1.0.0 is the version or tag 
+// DotNet9API/Dockerfile is the dockerfile file path
+docker build -t dotnet9:1.0.0 -f DotNet9API/Dockerfile .
+
+//this is running the created image without a container name, it will auto generate a container 
+//port mapping is forward 900 port of the local computer to 8080 port of the docker container, 8080 should be exposed through the docker file
+docker run -p 900:8080 dotnet9:1.0.0
+
+// can do the same with initialising a container name
+
+docker run --name dotnet9container3 -p 900:80 dotnet9:1.0.0
+
+
+
+//hosting in azure
+needs creating azure container registry
+login to az cmd and push the image to registry
+set the container details when creating app service
+
+
+//possible issues when hosted in azure
+//port needs to configure manually to 8080
+add an environment variable
+WEBSITES_PORT and set to 8080
+
