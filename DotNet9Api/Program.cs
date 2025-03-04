@@ -32,9 +32,52 @@ builder.Services.AddDbContext<DotNet9DbContext>(options => {
 });
 
 
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(builder.Configuration,"AzureAd");
+    .AddJwtBearer(options =>
+    {
+        options.Authority = "https://login.microsoftonline.com/f909ca1a-a214-4ccf-b29f-11fce091c373";
+        options.Audience = "5d7d8ee1-c409-4673-ad44-2c0d376ce596";
+
+        
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuers = new[]
+            {
+                $"https://login.microsoftonline.com/f909ca1a-a214-4ccf-b29f-11fce091c373/v2.0"
+            },
+           
+
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = context =>
+            {
+                // Log the failure details
+                Console.WriteLine($"Authentication failed: {context.Exception.Message}");
+                return Task.CompletedTask;
+            },
+            OnTokenValidated = context =>
+            {
+                // Log the token validation details
+                Console.WriteLine("Token validated successfully.");
+                return Task.CompletedTask;
+            },
+            OnChallenge = context =>
+            {
+                // This event is triggered when authorization fails
+                Console.WriteLine($"Authorization failed: {context.Error}");
+                return Task.CompletedTask;
+            }
+        };
+    });
+
+
+
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//                .AddMicrosoftIdentityWebApi(builder.Configuration, "AzureAd");
+
 
 
 
@@ -59,7 +102,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
+  <diagram name="Page-1" id="hTuzWsIHvRl5y4JMT7ns">
+    <mxGraphModel dx="1003" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qtWMSeZZgqbCZW0qRj_t-1" target="qtWMSeZZgqbCZW0qRj_t-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qtWMSeZZgqbCZW0qRj_t-1" target="qtWMSeZZgqbCZW0qRj_t-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-1" value="Backend ad app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qtWMSeZZgqbCZW0qRj_t-2" target="qtWMSeZZgqbCZW0qRj_t-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-2" value="Frontend ad app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-4" value="AD&lt;br&gt;&lt;br&gt;users&amp;nbsp;&lt;br&gt;user1@org.com" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-5" value="assign backend app the permissions to read users in ad" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-6" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="565" y="55" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-7" value="delegate backend permissions to frontend(refer in frondend permissions)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="210" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-8" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="365" y="208" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qtWMSeZZgqbCZW0qRj_t-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-9" value="end user/consumer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-13" value="ask for the fronend ad app token" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="338" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-14" value="3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="235" y="348" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qtWMSeZZgqbCZW0qRj_t-17" target="qtWMSeZZgqbCZW0qRj_t-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="435" />
+              <mxPoint x="840" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-17" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="755" y="410" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-19" value="4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="535" y="398" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-20" value="call api with recieved frontend token" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="383" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
