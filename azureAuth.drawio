@@ -26,14 +26,14 @@
         <mxCell id="qtWMSeZZgqbCZW0qRj_t-4" value="AD&lt;br&gt;&lt;br&gt;users&amp;nbsp;&lt;br&gt;user1@org.com" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="720" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="qtWMSeZZgqbCZW0qRj_t-5" value="assign backend app the permissions to read users in ad" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-5" value="assign backend app the permissions to read users in ad with aud" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="535" y="80" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qtWMSeZZgqbCZW0qRj_t-6" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="565" y="55" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qtWMSeZZgqbCZW0qRj_t-7" value="delegate backend permissions to frontend(refer in frondend permissions)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="410" y="210" width="130" height="80" as="geometry" />
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-7" value="delegate backend permissions to frontend(refer in frondend permissions)&lt;br&gt;also aud includes the backend ad app" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="210" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="qtWMSeZZgqbCZW0qRj_t-8" value="2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="365" y="208" width="30" height="30" as="geometry" />
@@ -52,11 +52,12 @@
         <mxCell id="qtWMSeZZgqbCZW0qRj_t-14" value="3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="235" y="348" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qtWMSeZZgqbCZW0qRj_t-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qtWMSeZZgqbCZW0qRj_t-17" target="qtWMSeZZgqbCZW0qRj_t-1">
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.574;entryY=1.043;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qtWMSeZZgqbCZW0qRj_t-17" target="qtWMSeZZgqbCZW0qRj_t-4">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="840" y="435" />
               <mxPoint x="840" y="200" />
+              <mxPoint x="789" y="200" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -68,6 +69,9 @@
         </mxCell>
         <mxCell id="qtWMSeZZgqbCZW0qRj_t-20" value="call api with recieved frontend token" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="565" y="383" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qtWMSeZZgqbCZW0qRj_t-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="225" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

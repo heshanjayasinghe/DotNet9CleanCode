@@ -31,14 +31,25 @@ builder.Services.AddDbContext<DotNet9DbContext>(options => {
     options.UseSqlServer(connectionString);
 });
 
+//this pushes to app insights
+builder.Services.AddApplicationInsightsTelemetry();
+
+//this pushes to logs
+builder.Services.AddLogging(builder =>
+{
+    // Add Application Insights as a logging provider
+    builder.Services.AddApplicationInsightsTelemetry();
+    // Set the minimum log level (this is optional, adjust as necessary)
+    builder.SetMinimumLevel(LogLevel.Information);
+});
+
+
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         options.Authority = "https://login.microsoftonline.com/f909ca1a-a214-4ccf-b29f-11fce091c373";
         options.Audience = "5d7d8ee1-c409-4673-ad44-2c0d376ce596";
-
-        
 
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -47,38 +58,31 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             {
                 $"https://login.microsoftonline.com/f909ca1a-a214-4ccf-b29f-11fce091c373/v2.0"
             },
-           
+            ValidateIssuerSigningKey = true
 
         };
         options.Events = new JwtBearerEvents
         {
             OnAuthenticationFailed = context =>
             {
-                // Log the failure details
+               // Log the failure details
                 Console.WriteLine($"Authentication failed: {context.Exception.Message}");
                 return Task.CompletedTask;
             },
             OnTokenValidated = context =>
             {
-                // Log the token validation details
+                //Log the token validation details
                 Console.WriteLine("Token validated successfully.");
                 return Task.CompletedTask;
             },
             OnChallenge = context =>
             {
-                // This event is triggered when authorization fails
+                //This event is triggered when authorization fails
                 Console.WriteLine($"Authorization failed: {context.Error}");
                 return Task.CompletedTask;
             }
         };
     });
-
-
-
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//                .AddMicrosoftIdentityWebApi(builder.Configuration, "AzureAd");
-
-
 
 
 
