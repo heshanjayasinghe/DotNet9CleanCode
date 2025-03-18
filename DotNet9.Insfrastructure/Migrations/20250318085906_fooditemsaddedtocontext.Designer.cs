@@ -3,6 +3,7 @@ using DotNet9.Insfrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNet9.Insfrastructure.Migrations
 {
     [DbContext(typeof(DotNet9DbContext))]
-    partial class DotNet9DbContextModelSnapshot : ModelSnapshot
+    [Migration("20250318085906_fooditemsaddedtocontext")]
+    partial class fooditemsaddedtocontext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

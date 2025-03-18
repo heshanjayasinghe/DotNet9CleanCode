@@ -31,7 +31,7 @@ builder.Services.AddDbContext<DotNet9DbContext>(options => {
     options.UseSqlServer(connectionString);
 });
 
-//this pushes to app insights
+//this pushes to app insights, this is mandotory to events to appear in azure
 builder.Services.AddApplicationInsightsTelemetry();
 
 //this pushes to logs
@@ -44,19 +44,19 @@ builder.Services.AddLogging(builder =>
 });
 
 
-
+var authenticationConfig = builder.Configuration.GetSection("AzureAd");
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        options.Authority = "https://login.microsoftonline.com/f909ca1a-a214-4ccf-b29f-11fce091c373";
-        options.Audience = "5d7d8ee1-c409-4673-ad44-2c0d376ce596";
+        options.Authority = authenticationConfig["Authority"];
+        options.Audience = authenticationConfig["Audience"];
 
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
             ValidIssuers = new[]
             {
-                $"https://login.microsoftonline.com/f909ca1a-a214-4ccf-b29f-11fce091c373/v2.0"
+               authenticationConfig["Issuer"]
             },
             ValidateIssuerSigningKey = true
 

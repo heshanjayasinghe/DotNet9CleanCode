@@ -18,7 +18,7 @@ namespace DotNet9.Insfrastructure.RepositoryImplementations
         public SessionRepository(DotNet9DbContext dbContext) {
         _dbContext = dbContext;
         }
-        public async Task<List<Session>> SessionsWithSongNotes()
+        public async Task<List<Session>> SessionsWithSongNotesOld()
         {
             using (var sqlConnection1 = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Database=DotNet9.Db;Trusted_Connection=true;TrustServerCertificate=True;Integrated Security=true;"))
             {
@@ -46,6 +46,12 @@ namespace DotNet9.Insfrastructure.RepositoryImplementations
                 }
                 }
                 return new List<Session>();
+        }
+
+
+        public async Task<List<Session>> SessionsWithSongNotes()
+        {
+           return await  _dbContext.Sessions.Include(item => item.Songs).ToListAsync();
         }
     }
 }

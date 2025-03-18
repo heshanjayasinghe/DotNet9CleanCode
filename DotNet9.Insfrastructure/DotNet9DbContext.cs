@@ -19,7 +19,7 @@ namespace DotNet9.Insfrastructure
         public DbSet<User> Users { get; set; }
         public DbSet<Session> Sessions { get; set; }
         public DbSet<Song> Songs { get; set; }
-
-
+        public DbSet<FoodItems> FoodItems { get; set; }
+        
     }
 }
