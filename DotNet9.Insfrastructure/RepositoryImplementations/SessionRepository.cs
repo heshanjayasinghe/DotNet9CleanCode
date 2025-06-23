@@ -1,5 +1,4 @@
 ﻿using DotNet9.Domain.DatabaseEntities;
-using DotNet9.Domain.RepositoryInterfaces;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using DotNet9.Application.RepositoryInterfaces;
 
 namespace DotNet9.Insfrastructure.RepositoryImplementations
 {

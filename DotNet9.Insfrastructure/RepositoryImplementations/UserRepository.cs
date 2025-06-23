@@ -1,5 +1,5 @@
-﻿using DotNet9.Domain.DatabaseEntities;
-using DotNet9.Domain.RepositoryInterfaces;
+﻿using DotNet9.Application.RepositoryInterfaces;
+using DotNet9.Domain.DatabaseEntities;
 
 namespace DotNet9.Insfrastructure.RepositoryImplementations
 {

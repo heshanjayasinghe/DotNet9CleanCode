@@ -1,6 +1,6 @@
-﻿using DotNet9.Application.ServiceInterfaces;
+﻿using DotNet9.Application.RepositoryInterfaces;
+using DotNet9.Application.ServiceInterfaces;
 using DotNet9.Application.UseCases.Session.Queries;
-using DotNet9.Domain.RepositoryInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

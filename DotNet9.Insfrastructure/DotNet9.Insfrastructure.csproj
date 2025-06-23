@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DotNet9.Application\DotNet9.Application.csproj" />
     <ProjectReference Include="..\DotNet9.Domain\DotNet9.Domain.csproj" />
   </ItemGroup>
 

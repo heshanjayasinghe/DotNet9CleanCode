@@ -1,4 +1,5 @@
-﻿using DotNet9.Domain.RepositoryInterfaces;
+﻿
+using DotNet9.Application.RepositoryInterfaces;
 using DotNet9.Insfrastructure.RepositoryImplementations;
 
 namespace DotNet9API.ServiceRegistration
